@@ -1,0 +1,41 @@
+{
+    "name": "softwax/sitemap-bundle",
+    "type": "symfony-bundle",
+    "description": "A symfony bundle that provides tools to build page sitemap and generate robots content",
+    "keywords": ["sitemap", "robots"],
+    "homepage": "https://github.com/SoftWax",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SoftWax",
+            "homepage": "https://github.com/orgs/SoftWax/people"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "symfony/config": "^3.0|^4.0",
+        "symfony/dependency-injection": "^3.0|^4.0",
+        "symfony/http-foundation": "^3.0|^4.0",
+        "symfony/routing": "^3.0|^4.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.11.16",
+        "squizlabs/php_codesniffer": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoftWax\\Bundle\\SitemapBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SoftWax\\Bundle\\SitemapBundle\\Tests\\": "Tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
