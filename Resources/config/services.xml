@@ -4,17 +4,8 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services
         https://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <services>
-        <service id="SoftWax\Bundle\SitemapBundle\Controller\RobotsController" class="SoftWax\Bundle\SitemapBundle\Controller\RobotsController" public="false">
-            <tag name="controller.service_arguments"/>
-        </service>
-
-        <service id="SoftWax\Bundle\SitemapBundle\Controller\SitemapController" class="SoftWax\Bundle\SitemapBundle\Controller\SitemapController" public="false">
-            <tag name="controller.service_arguments"/>
-        </service>
-
-        <service id="SoftWax\Bundle\SitemapBundle\Controller\SitemapSectionController" class="SoftWax\Bundle\SitemapBundle\Controller\SitemapSectionController" public="false">
-            <tag name="controller.service_arguments"/>
-        </service>
-    </services>
+    <imports>
+        <import resource="services/builders.xml"/>
+        <import resource="services/controllers.xml"/>
+    </imports>
 </container>

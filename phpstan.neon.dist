@@ -1,0 +1,9 @@
+parameters:
+    level: max
+    fileExtensions:
+        - php
+    paths:
+        - ./
+    excludes_analyse:
+        - Tests
+        - vendor

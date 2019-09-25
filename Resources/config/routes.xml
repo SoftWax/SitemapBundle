@@ -4,22 +4,19 @@
         xsi:schemaLocation="http://symfony.com/schema/routing
         https://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="softwax.sitemap.robots" path="/robots.{_format}" methods="GET">
+    <route id="softwax.sitemap.robots" path="/robots.txt" methods="GET">
         <default key="_controller">SoftWax\Bundle\SitemapBundle\Controller\RobotsController</default>
         <default key="_format">txt</default>
-        <requirement key="_format">txt</requirement>
     </route>
 
-    <route id="softwax.sitemap.sitemap" path="/sitemap.{_format}" methods="GET">
+    <route id="softwax.sitemap.sitemap" path="/sitemap.xml" methods="GET">
         <default key="_controller">SoftWax\Bundle\SitemapBundle\Controller\SitemapController</default>
         <default key="_format">xml</default>
-        <requirement key="_format">xml</requirement>
     </route>
 
-    <route id="softwax.sitemap.sitemap_section" path="/sitemap.{section}.{page}.{_format}" methods="GET">
+    <route id="softwax.sitemap.sitemap_section" path="/sitemap.{section}.{page}.xml" methods="GET">
         <default key="_controller">SoftWax\Bundle\SitemapBundle\Controller\SitemapSectionController</default>
         <default key="_format">xml</default>
-        <requirement key="_format">xml</requirement>
         <requirement key="page">\d+</requirement>
     </route>
 </routes>
